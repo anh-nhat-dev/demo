@@ -1,0 +1,212 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: arial;
+	font-size: 14px;
+}
+#header {
+	background: $color-1;
+	#logo{
+		height: 98px;
+	}
+	#search {
+		height: 98px;
+		input{
+			border: 1px solid $color-3;
+			height: 33px;
+			margin-top: $max;
+			float: left;
+			font-size: 12px;
+			&:focus{
+				outline: none;
+			}
+			&[type=submit]{
+				background: $color-3;
+				padding: 0 $min 0 $max;
+				color: $color-1;
+				cursor: pointer;
+
+
+			}
+			&[type=text]{
+				width: 332px;
+				background: transparent;
+				color: $color-3;
+				padding-left: $min;
+				margin-left: $max;
+			}
+		}
+		}
+	#cart {
+		height: 98px;
+		line-height: 98px;
+		a{
+			color: $color-3;
+			text-decoration: none;
+			font-weight: bold;
+			position: relative;
+		}
+		i{
+			font-size: 60px;
+			color: $color-3;
+			position: absolute;
+			top: $min;
+			right: $max;
+			&:after{
+				content: "6";
+				position: absolute;
+				top: $min;
+				right: 20px;
+				color: $color-2;
+				font-size: 17px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+// CSS for margin
+#main {
+	margin: $min 0 $max * 2 0;
+	#banner-top {
+		margin: $min 0;
+		._1banner{
+
+			img{
+				height: 100%;
+			}
+		}
+	}
+	#products {
+		
+		overflow: hidden;
+		h3 {
+			margin: $max * 2 0 $max 0;
+			text-transform: uppercase;
+			font-size: 18px;
+			a{
+				color: $color-1;
+				text-decoration: none;
+			}
+		}
+		.product {
+			
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			._1pro{
+				border: 1px solid $color-4;
+				text-align: center;
+				padding: $min 0;
+				position: relative;
+				flex-basis: 24.5%;
+				margin-bottom: 0.75%;
+
+				&:hover {
+					&:after {
+						opacity: 0.5;
+					}
+					a.view {
+						opacity: 1;
+					}
+				}
+				&:after{
+					content: "";
+					position: absolute;
+					opacity: 0;
+					height: 100%;
+					width: 100%;
+					background: #000;
+					top: 0;
+					left: 0;
+					z-index: 1;
+					
+					transition: 0.5s;
+				}
+				a.view {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-left: -47px;
+					color: $color-3;
+					opacity: 0;
+					z-index: 2;
+					transition: 0.5s;
+					text-decoration: none;
+
+				}
+				a.name{
+					color: $color-7;
+					display: block;
+					padding: $min;
+
+				}
+				p{
+					text-transform: uppercase;
+					color: $color-6;
+					font-weight: bold;
+				}
+				img{
+					display: block;
+					margin: auto;
+
+				}
+			}
+		}
+	}
+	#menu-left{
+		ul{
+			list-style: none;
+			border: 1px solid $color-4;
+			border-radius: 2px;
+			
+			li {
+				padding: $min - 5 0;
+				border-bottom: 1px solid $color-4;
+				width: 90%;
+				margin: 0 auto;
+				a{
+					color: $color-8;
+					text-decoration: none;
+				}
+				&:last-child{
+					border: none;
+				}
+				&:first-child {
+					width: 100%;
+					padding-left: $min;
+					text-transform: uppercase;
+					background: $color-4;
+					font-weight: bold;
+				}
+
+			}
+		}
+	}
+	#banner-left {
+		._1banner {
+			margin-bottom: $min;
+		}
+	}
+}
+#footer {
+	color: $color-3;
+	#footer-bottom {
+		background: $color-2;
+		padding: $max $min;
+		text-align: center;
+	}
+	#footer-top {
+		.logo {
+			background:url(images/logo.png) top center no-repeat;
+			height: 98px;
+		}
+		background: $color-1;
+		padding: $max 0;
+		
+		p{
+			text-align: justify;
+		}
+	}
+}
